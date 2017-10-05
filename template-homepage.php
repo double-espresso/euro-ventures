@@ -3,12 +3,13 @@
  * Template Name: Homepage
  */
 ?>
-<?php get_header('homepage'); ?>
+
+<?php get_header(); ?>
 <?php wp_reset_postdata(); ?>
     <section class="cd-section" id="section1">
       <div class="row">
         <div class="large-10 columns">
-          <h1>We invest in America’s Growth.</h1>
+          <h1><?php the_title(); ?></h1>
           <button class="button-secondary"><span>Learn more about us</span></button>
         </div>
           <!-- <div class="mouse"><span></span></div> -->
@@ -22,19 +23,19 @@
           <button class="button-secondary"><span>See all our Startups</span></button>
         </div>
         <div class="basso small-6 medium-6 large-3 columns ">
-          <figure class="startup"><img src="img/startup/startup_1.jpg"/>
+          <figure class="startup"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/startup/startup_1.jpg"/>
               <figcaption>
               <p>Ava AG is developing a wearable medical device which monitors the menstrual cycle of women in order to precisely indicate fertile days and thus facilitate family planning.</p>
               <span>Learn more</span>
               </figcaption><a href="meet-our-startups.html"></a>
           </figure>
-          <figure class="startup"><img src="img/startup/startup_2.jpg"/>
+          <figure class="startup"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/startup/startup_2.jpg"/>
               <figcaption>
               <p>Ava AG is developing a wearable medical device which monitors the menstrual cycle of women in order to precisely indicate fertile days and thus facilitate family planning.</p>
               <span>Learn more</span>
               </figcaption><a href="#"></a>
           </figure>
-          <figure class="startup"><img src="img/startup/startup_3.jpg"/>
+          <figure class="startup"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/startup/startup_3.jpg"/>
               <figcaption>
               <p>Ava AG is developing a wearable medical device which monitors the menstrual cycle of women in order to precisely indicate fertile days and thus facilitate family planning.</p>
               <span>Learn more</span>
@@ -42,19 +43,19 @@
           </figure>
         </div>
         <div class="small-6 medium-6 large-3 columns">
-          <figure class="startup"><img src="img/startup/startup_4.jpg"/>
+          <figure class="startup"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/startup/startup_4.jpg"/>
               <figcaption>
               <p>Ava AG is developing a wearable medical device which monitors the menstrual cycle of women in order to precisely indicate fertile days and thus facilitate family planning.</p>
               <span>Learn more</span>
               </figcaption><a href="#"></a>
           </figure>
-          <figure class="startup"><img src="img/startup/startup_5.jpg"/>
+          <figure class="startup"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/startup/startup_5.jpg"/>
               <figcaption>
               <p>Ava AG is developing a wearable medical device which monitors the menstrual cycle of women in order to precisely indicate fertile days and thus facilitate family planning.</p>
               <span>Learn more</span>
               </figcaption><a href="#"></a>
           </figure>
-          <figure class="startup"><img src="img/startup/startup_6.jpg"/>
+          <figure class="startup"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/startup/startup_6.jpg"/>
               <figcaption>
               <p>Ava AG is developing a wearable medical device which monitors the menstrual cycle of women in order to precisely indicate fertile days and thus facilitate family planning.</p>
               <span>Learn more</span>
@@ -72,7 +73,7 @@
         </div>
         <div class="small-3 medium-3 large-2 columns">
           <div class="card">
-              <img src="img/team/lucian-wagner.jpg">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/lucian-wagner.jpg">
               <div class="card-section">
                 <p>Lucian Wagner</p>
               </div>
@@ -80,7 +81,7 @@
         </div>
         <div class="basso small-3 small-2 medium-3 large-2 columns">
           <div class="card">
-              <img src="img/team/vincent-titolo.jpg">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/vincent-titolo.jpg">
               <div class="card-section">
                 <p>Vincent Titolo</p>
               </div>
@@ -88,7 +89,7 @@
         </div>
         <div class="small-3 medium-3 large-2 columns">
           <div class="card">
-              <img src="img/team/jan-nygren.jpg">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/jan-nygren.jpg">
               <div class="card-section">
                 <p>Jan Nygren</p>
               </div>
@@ -96,7 +97,7 @@
         </div>
         <div class="basso small-3 medium-3 large-2 columns">
           <div class="card">
-              <img src="img/team/matthew-hua.jpg">
+              <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/team/matthew-hua.jpg">
               <div class="card-section">
                 <p>Matthew Hua</p>
               </div>
@@ -119,7 +120,7 @@
                   8032 Zürich, Switzerland<br>
                   +41 44 991 62 57</p>
             </div>
-            <img src="img/office/map-zurich.jpg">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/office/map-zurich.jpg">
           </div>
         </div>
       </div>
@@ -139,7 +140,7 @@
                   Newton, MA 02466 USA<br>
                   +1 (617) 244-2300</p>
             </div>
-            <img src="img/office/map-boston.jpg">
+            <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/office/map-boston.jpg">
           </div>
         </div>
       </div>
@@ -160,11 +161,11 @@
                   <span>PARTNER’S NAME</span>
                   <p>This text will be centered against the image, regardless of image size or copy length.</p>
               </div>
-                <img src="img/test-logo.jpg" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/test-logo.jpg" />
             </div>
 
             <div class="media">
-                <img src="img/test-logo.jpg" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/test-logo.jpg" />
                 <div class="content-media">
                   <h5>Partner</h5>
                   <span>PARTNER’S NAME</span>
@@ -178,7 +179,7 @@
                   <span>PARTNER’S NAME</span>
                   <p>This text will be centered against the image, regardless of image size or copy length.</p>
                 </div>
-                <img src="img/test-logo.jpg" />
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/test-logo.jpg" />
             </div>
           </div>
 
