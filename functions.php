@@ -65,3 +65,6 @@ return count( $comments_by_type['comment'] );
 return $count;
 }
 }
+
+// Include ACF
+include_once 'custom/acf.php';
