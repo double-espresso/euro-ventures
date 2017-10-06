@@ -66,5 +66,11 @@ return $count;
 }
 }
 
+// ACF Option Page
+if( function_exists('acf_add_options_page') ) {
+  acf_add_options_page();
+  acf_add_options_sub_page('Social');
+}
+
 // Include ACF
 include_once 'custom/acf.php';

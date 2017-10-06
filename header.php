@@ -39,7 +39,7 @@
 
   <header class="main_h">
     <div class="row">
-      <a class="logo" href="index.html">EURO US VENTURES</a>
+      <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">EURO US VENTURES</a>
 
       <div class="mobile-toggle">
         <span></span>
@@ -47,22 +47,24 @@
         <span></span>
       </div>
 
-      <nav>
-         <ul>
-            <li><a href="who-we-are.html">WHO WE ARE</a></li>
-            <li><a href="meet-our-startups.html">PORTFOLIO</a></li>
-            <li><a href="our-team.html">TEAM</a></li>
-            <li><a href="#">PARTNERS</a></li>
-            <li><a href="#section5">BLOG</a></li>
-            <li><a href="#section6">CONTACT</a></li>
-         </ul>
+      <nav class="primary">
+        <?php wp_nav_menu( array( 'menu' => '', 'primary' ) ); ?>
       </nav>
 
-      <div class="social-links">
-        <a href="#" title="Mail" target="_blank"><i class="fa fa-mail"></i></a>
-        <a href="#" title="Linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
-        <a href="#" title="Twitter" target="_blank"><i class="fa fa-twitter"></i></a>
-      </div>
+      <?php if(have_rows('social', 'options')): ?>
+        <div class="social-links">
+            <nav class="social">
+              <ul>
+                <?php while (have_rows('social', 'options')): the_row(); ?>
+                  <li>
+                    <a href="<?php the_sub_field('url'); ?>" title="<?php the_sub_field('name'); ?>" target="_blank" class="avatar_social"><?php the_sub_field('name'); ?></a>
+                  </li>
+                <?php endwhile; ?>
+              </ul>
+            </nav>
+        </div>
+      <?php endif; ?>
+      
     </div> <!-- / row -->
   </header>
 
