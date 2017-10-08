@@ -9,8 +9,8 @@
     <section class="cd-section" id="section1">
       <div class="row">
         <div class="large-10 columns">
-          <h1><?php the_title(); ?></h1>
-          <button class="button-secondary"><span>Learn more about us</span></button>
+          <h1><?php the_field('section_1_title'); ?></h1>
+          <div class="button-default"><a href <?php the_field('section_1_page_link') ?>class="button-secondary"><span><?php the_field('section_1_button_label') ?></span></a></div>
         </div>
           <!-- <div class="mouse"><span></span></div> -->
       </div> 
@@ -19,8 +19,8 @@
     <section class="cd-section" id="section2">
       <div class="row">
         <div class="large-6 columns">
-          <h1>Meet our Startups.</h1>
-          <button class="button-secondary"><span>See all our Startups</span></button>
+          <h1><?php the_field('section_2_title'); ?></h1>
+          <div class="button-default"><a href <?php the_field('section_2_page_link') ?>class="button-secondary"><span><?php the_field('section_2_button_label') ?></span></a></div>
         </div>
         <div class="basso small-6 medium-6 large-3 columns ">
           <figure class="startup"><img src="<?php echo get_stylesheet_directory_uri(); ?>/img/startup/startup_1.jpg"/>
@@ -68,8 +68,8 @@
     <section class="cd-section" id="section3">
       <div class="row">
         <div class="large-4 columns">
-          <h1>Our Team.</h1>
-          <button class="button-secondary"><span>Meet the team</span></button>
+          <h1><?php the_field('section_3_title'); ?></h1>
+          <div class="button-default"><a href <?php the_field('section_3_page_link') ?>class="button-secondary"><span><?php the_field('section_3_button_label') ?></span></a></div>
         </div>
         <div class="small-3 medium-3 large-2 columns">
           <div class="card">
@@ -109,10 +109,10 @@
     <section class="cd-section" id="section4">
       <div class="row">
         <div class="large-6 columns">
-          <h1>Our Zurich Office.</h1>
-          <button class="button-secondary"><span>Email us</span></button>
+          <h1><?php the_field('section_4_title'); ?></h1>
+          <div class="button-default"><a href <?php the_field('section_4_page_link') ?>class="button-secondary"><span><?php the_field('section_4_button_label') ?></span></a></div>
         </div>
-        <div class="small-8 medium-6 large-5 columns">
+        <div class="large-5 columns">
           <div class="mappa">
             <div class="info-map">
               <h3>Euro US Ventures AG</h3>
@@ -129,10 +129,10 @@
     <section class="cd-section" id="section5">
       <div class="row">
         <div class="large-6 columns">
-          <h1>Our Boston Office.</h1>
-          <button class="button-secondary"><span>Email us</span></button>
+          <h1><?php the_field('section_5_title'); ?></h1>
+          <div class="button-default"><a href <?php the_field('section_5_page_link') ?>class="button-secondary"><span><?php the_field('section_5_button_label') ?></span></a></div>
         </div>
-        <div class="small-12 medium-6 large-5 columns map">
+        <div class="large-5 columns">
           <div class="mappa">
             <div class="info-map">
               <h3>Euro US Ventures LLC</h3>
@@ -149,10 +149,10 @@
     <section class="cd-section" id="section6">
       <div class="row">
         <div class="large-6 columns">
-          <h1>Our Partners</h1>
+          <h1><?php the_field('section_6_title'); ?></h1>
         </div>
 
-        <div class="medium-6 large-5 columns">
+        <div class="small-6 medium-5 large-4 columns">
           
           <div class="med">
             <div class="media">
@@ -192,7 +192,7 @@
     <section class="cd-section" id="section7">
       <div class="row">
         <div class="large-6 columns">
-          <h1>Let’s talk.</h1>
+          <h1><?php the_field('section_7_title'); ?></h1>
         </div>
         <div class="large-6 columns">
           
