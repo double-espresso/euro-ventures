@@ -1653,7 +1653,7 @@ line-height: 40px;
 
   #section5 .button-default, #section4 .button-default {
     position: absolute;
-    z-index: 9999;
+    z-index: 998;
     bottom: -280px;
     left: 50%;
     margin-left: -120px;
@@ -1695,7 +1695,7 @@ line-height: 40px;
     font-family: 'PT Sans Narrow', sans-serif;
   }
   .cd-section {
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     padding: 20px;
     background-color: royalblue;
@@ -1733,7 +1733,7 @@ line-height: 40px;
 
   #section5 .button-default, #section4 .button-default {
     position: absolute;
-    z-index: 9999;
+    z-index: 998;
     bottom: -260px;
     left: 50%;
     margin-left: -110px;
