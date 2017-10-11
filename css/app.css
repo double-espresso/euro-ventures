@@ -382,26 +382,13 @@ STICKY HEADER
   max-height: 70px;
   z-index: 999;
   width: 100%;
-  padding-top: 17px;
+  padding-top: 20px;
   background: none;
   overflow: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   top: -100;
   padding-bottom: 6px;
-}
-@media only screen and (max-width: 766px) {
-  .main_h {
-    padding-top: 25px;
-  }
-}
-
-.open-nav {
-  max-height: 400px !important;
-}
-.open-nav .mobile-toggle {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(45deg);
 }
 
 .sticky {
@@ -430,30 +417,15 @@ STICKY HEADER
   color: #fff;
 }
 
-@media only screen and (max-width: 766px) {
-  .logo {
-    float: none;
-    margin-left: 22px;
-  }
-}
-
-
 .main_h nav {
   float: left;
   width: 65%;
-}
-@media only screen and (max-width: 766px) {
-  .main_h nav {
-    width: 100%;
-  }
 }
 .main_h nav ul {
   list-style: none;
   overflow: hidden;
   text-align: right;
   float: right;
-   font-family: 'Montserrat', sans-serif;
-
 }
 @media only screen and (max-width: 766px) {
   .main_h nav ul {
@@ -478,7 +450,6 @@ STICKY HEADER
 }
 .main_h nav ul a {
   color: #fff;
-  text-transform: uppercase;
   font-size: 11px;
   font-weight: 500;
 }
@@ -1553,6 +1524,31 @@ line-height: 40px;
   content: "\eaa7";
 }
 
+#nav:checked + .nav-open i {
+  background: #3B5997;
+}
+#nav:checked + .nav-open i:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 4px);
+}
+#nav:checked + .nav-open i:nth-child(2) {
+  transform: translateX(100px);
+}
+#nav:checked + .nav-open i:nth-child(3) {
+  transform: rotate(-45deg) translate(4px, -4px);
+}
+#nav:checked ~ .nav-container {
+  z-index: 9990;
+  opacity: 1;
+}
+#nav:checked ~ .nav-container ul li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hidden {
+  display: none;
+}
+
+
 /*// large
 */@media screen and (max-width: 79.938em) {
    .cd-section h1 {
@@ -1682,6 +1678,85 @@ line-height: 40px;
   .main_h {
     padding-left: 20px;
    }
+   .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    background: #eee;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .nav-container ul {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .nav-container ul li {
+    display: block;
+    float: none;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .nav-container ul li:nth-child(1) a {
+    transition-delay: 0.2s;
+  }
+  .nav-container ul li:nth-child(2) a {
+    transition-delay: 0.3s;
+  }
+  .nav-container ul li:nth-child(3) a {
+    transition-delay: 0.4s;
+  }
+  .nav-container ul li:nth-child(4) a {
+    transition-delay: 0.5s;
+  }
+  .nav-container ul li:not(:first-child) {
+    margin-left: 0;
+  }
+  .nav-container ul li a {
+    padding: 10px 20px;
+    opacity: 0;
+    color: #3B5997;
+    font-size: 32px;
+    font-weight: 800;
+    transform: translateY(-20px);
+    transition: all 0.2s ease;
+  }
+  .nav-open {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+  .nav-open i {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    margin-left: 20px;
+  }
+  .nav-open i:nth-child(1) {
+    margin-top: 20px;
+    transition: transform 0.3s ease;
+
+  }
+  .nav-open i:nth-child(2) {
+    margin-top: 4px;
+    transition: transform 0.3s ease;
+  }
+  .nav-open i:nth-child(3) {
+    margin-top: 4px;
+    transition: transform 0.3s ease;
+  }
 }
 /*// small*/
 @media screen and (max-width: 39.938em) {
@@ -1728,7 +1803,7 @@ line-height: 40px;
     padding: 0 40px;
   }
   .no-touch #cd-vertical-nav {
-  display: none;
+    display: none;
   }
 
   #section5 .button-default, #section4 .button-default {
@@ -1741,7 +1816,7 @@ line-height: 40px;
   }
   #section1 .button-default, #section2 .button-default, #section3 .button-default {
     position: absolute;
-    z-index: 9999;
+    z-index: 998;
     bottom: -120px;
     left: 50%;
     margin-left: -110px;
@@ -1755,9 +1830,9 @@ line-height: 40px;
     font-size: 15px;
   }
   .list-logo {
-  text-align: center;
-  padding: 0 0 20px 0;
-}
+    text-align: center;
+    padding: 0 0 20px 0;
+  }
 
 }
 

@@ -41,14 +41,14 @@
     <div class="row">
       <a class="logo" href="<?php echo esc_url(home_url('/')); ?>">EURO US VENTURES</a>
 
-      <div class="mobile-toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <nav class="primary">
-        <?php wp_nav_menu( array( 'menu' => '', 'primary' ) ); ?>
+      <nav>
+        <input type="checkbox" id="nav" class="hidden"/>
+        <label for="nav" class="nav-open">
+          <i></i><i></i><i></i>
+        </label>
+        <div class="nav-container">
+          <?php wp_nav_menu( array( 'menu' => '', 'primary' ) ); ?>
+        </div>
       </nav>
 
       <?php if(have_rows('social', 'options')): ?>
