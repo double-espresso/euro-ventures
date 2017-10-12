@@ -152,7 +152,7 @@
           <h1><?php the_field('section_6_title'); ?></h1>
         </div>
 
-        <div class="small-6 medium-5 large-4 columns">
+        <div class="small-8 small-centered medium-6 large-4 large-offset-2 large-uncentered columns">
           
           <div class="med">
             <div class="media">

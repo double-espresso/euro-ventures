@@ -1549,7 +1549,12 @@ line-height: 40px;
    .mappa img{
       display: none;
    }
-   .med {display: none;}
+   .med h5, .med p{
+    display: none;
+  }
+    .med span {
+      line-height: 15px;
+    }
    .info-map {
     position: relative;
     width: 100%;
