@@ -406,39 +406,20 @@ STICKY HEADER
   display: block;
   margin-top: 0;
   line-height: 1;
-  margin-bottom: 10px;
-  padding: 10px;
+  padding: 10px 10px 8px 10px;
   border: 1px solid #fff;
   font-family: 'Vollkorn', serif;
   font-weight: 400;
+  margin-bottom: 20px;
 }
 
 .logo:hover {
   color: #fff;
 }
 
-.main_h nav {
-  width: 60%;
-}
-.main_h nav ul {
-  list-style: none;
-  float: right;
-}
-
-.main_h nav ul li {
-  display: inline-block;
-  float: left;
-  margin-left: 30px;
-  margin-top: -20px;
-
-}
-
 .main_h nav ul a {
   color: #fff;
-  font-size: 11px;
   font-weight: 500;
-  font-family: Montserrat;
-  text-transform: uppercase;
 }
 
 @-webkit-keyframes scroll {
@@ -476,6 +457,7 @@ STICKY HEADER
     font-size: 14px;
     text-align: right;
     float: right;
+    padding-right: 20px;
 }
 .social-links a{
     width: 32px;
@@ -504,7 +486,6 @@ STICKY HEADER
     display: inline-block;
     width: 100%;
     height: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     border: 2px solid #fff;
@@ -512,12 +493,6 @@ STICKY HEADER
     -webkit-border-radius: 2px;
     -moz-border-radius: 2px;
     border-radius: 50%;
-    
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
     
     -webkit-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000);  
     -moz-transition: all 0.27s cubic-bezier(0.300, 0.100, 0.580, 1.000); 
@@ -1408,21 +1383,16 @@ line-height: 40px;
   height: 30px;
   display: block;
   font-family: 'wave' !important;
-  font-size: 0;
   text-align: center;
-  color: $dark;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .social a:before {
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
+  font-size: 14px;
+  line-height: 28px;
   display: block;
   font-weight: normal;
-  text-indent: 3px;
   @include transition(.3s);
 }
 
@@ -1478,6 +1448,37 @@ line-height: 40px;
   display: none;
 }
 
+.social ul {
+  margin-bottom: 0;
+  display: flex;
+}
+
+.social ul li {
+  margin-left: 10px;
+  list-style: none;
+}
+
+.nav-container {
+  float: left;
+}
+
+.nav-container ul {
+  float: right;
+}
+
+.nav-container ul li {
+  margin:0 30px;
+  display: inline-block;
+  float: right;
+  list-style: none;
+  text-align: right;
+}
+
+.nav-container ul li a {
+    font-size: 11px;
+    font-family: Montserrat;
+    text-transform: uppercase;
+}
 
 /*// large
 */@media screen and (max-width: 79.938em) {
@@ -1513,16 +1514,13 @@ line-height: 40px;
     padding: 0 40px;
     text-align: center;
   }
-  .startup-img {
-    padding: 0 30%;
-  }
+
   .page-container p {
     text-align: center;
   }
   .section-startup {
     background-color: #fff;
     text-align: center;
-    padding: 0 80px;
   }
   .cd-section {
       padding: 0 80px;
@@ -1565,6 +1563,9 @@ line-height: 40px;
    #section7 h1 {
     padding-bottom: 0px;
     padding-top: 20px;
+   }
+   #section6 h1 {
+    padding: 0;
    }
    .form-container textarea {
     height: 0;
@@ -1662,7 +1663,7 @@ line-height: 40px;
     transition: all 0.2s ease;
   }
   .nav-open {
-    position: fixed;
+    position: absolute;
     right: 10px;
     top: 10px;
     display: block;
@@ -1698,10 +1699,13 @@ line-height: 40px;
     font-family: 'Titillium Web', sans-serif;
   }
   .main_h nav ul li {
-  display: inline-block;
-  margin-left: 0;
-  margin-top: 0;
-  line-height: 1.5;
+    display: inline-block;
+    margin-left: 0;
+    margin-top: 0;
+    line-height: 1.5;
+  }
+  .social {
+    display: none;
   }
 }
 /*// small*/
@@ -1732,9 +1736,7 @@ line-height: 40px;
     padding: 0 40px;
     text-align: center;
   }
-  .startup-img {
-    padding: 0 100px;
-  }
+
   .hero h1 {
     font-size: 80px;
     line-height: 80px;
@@ -1746,7 +1748,6 @@ line-height: 40px;
   .section-startup {
     background-color: #fff;
     text-align: center;
-    padding: 0 40px;
   }
   .no-touch #cd-vertical-nav {
     display: none;

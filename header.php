@@ -49,9 +49,7 @@
         <div class="nav-container">
           <?php wp_nav_menu( array( 'menu' => '', 'primary' ) ); ?>
         </div>
-      </nav>
-
-      <?php if(have_rows('social', 'options')): ?>
+        <?php if(have_rows('social', 'options')): ?>
         <div class="social-links">
             <nav class="social">
               <ul>
@@ -63,7 +61,10 @@
               </ul>
             </nav>
         </div>
-      <?php endif; ?>
+        <?php endif; ?>
+      </nav>
+
+      
       
     </div> <!-- / row -->
   </header>
