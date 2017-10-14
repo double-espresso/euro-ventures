@@ -12,7 +12,7 @@
           <h1><?php the_field('section_1_title'); ?></h1>
           <div class="button-default"><a href <?php the_field('section_1_page_link') ?>class="button-secondary"><span><?php the_field('section_1_button_label') ?></span></a></div>
         </div>
-          <!-- <div class="mouse"><span></span></div> -->
+        <div id="scrolldown"><span><p>↓</p></span></div>
       </div> 
     </section>
 
@@ -62,6 +62,7 @@
               </figcaption><a href="#"></a>
           </figure>
         </div>
+        <div id="scrolldown"><span><p>↓</p></span></div>
       </div> 
     </section>
 
@@ -103,6 +104,7 @@
               </div>
           </div>
         </div>
+        <div id="scrolldown"><span><p>↓</p></span></div>
       </div>
     </section>
 
@@ -123,6 +125,7 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/office/map-zurich.jpg">
           </div>
         </div>
+        <div id="scrolldown"><span><p>↓</p></span></div>
       </div>
     </section>
 
@@ -143,6 +146,7 @@
             <img src="<?php echo get_stylesheet_directory_uri(); ?>/img/office/map-boston.jpg">
           </div>
         </div>
+        <div id="scrolldown"><span><p>↓</p></span></div>
       </div>
     </section>
 
@@ -185,9 +189,10 @@
 
 
         </div>
+        <div id="scrolldown"><span><p>↓</p></span></div>
 
       </div>
-    </section><!-- cd-section -->
+    </section>
 
     <section class="cd-section" id="section7">
       <div class="row">
@@ -242,5 +247,5 @@
 
         </div>
       </div>
-    </section><!-- cd-section -->
+    </section>
 <?php get_footer(); ?>

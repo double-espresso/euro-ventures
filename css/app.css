@@ -1480,6 +1480,11 @@ line-height: 40px;
     text-transform: uppercase;
 }
 
+#scrolldown {
+  display: none;
+}
+
+
 /*// large
 */@media screen and (max-width: 79.938em) {
    .cd-section h1 {
@@ -1630,6 +1635,7 @@ line-height: 40px;
     top: 50%;
     transform: translateY(-50%);
     width: 100%;
+    margin-left: 0;
   }
   .nav-container ul li {
     display: block;
@@ -1780,6 +1786,41 @@ line-height: 40px;
     text-align: center;
     padding: 0 0 20px 0;
   }
+  #scrolldown {
+    bottom: -35px;
+    height: 100px;
+    margin-left: -50px;
+    position: absolute;
+    left: 50%;
+    text-align: center;
+    width: 100px;
+    z-index: 100;
+    display: block;
+  }
+  #scrolldown p {
+    font-weight: 700;
+    font-size: 20px;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    animation-name: scroll;
+    color: #fff;
+  }
+  #scrolldown > p {
+    text-transform: uppercase;
+    text-indent: 3px;
+  }
 
+
+  @keyframes scroll {
+    0% {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
 }
 
