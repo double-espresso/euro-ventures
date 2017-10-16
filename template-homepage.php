@@ -4,7 +4,7 @@
  */
 ?>
 
-<?php get_header(); ?>
+<?php get_header('home'); ?>
 <?php wp_reset_postdata(); ?>
     <section class="cd-section" id="section1">
       <div class="row">

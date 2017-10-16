@@ -502,7 +502,7 @@ STICKY HEADER
     
 }
 .social-links a:hover{
-    color: #fff;
+    color: #3B5997;
 }
 .social-links a:hover:before{
     background: #fff;
@@ -1444,6 +1444,17 @@ line-height: 40px;
   opacity: 1;
   transform: translateY(0);
 }
+
+#nav:checked ~ .social {
+  z-index: 9990;
+  opacity: 1;
+}
+
+#nav:checked ~ .social ul li a {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .hidden {
   display: none;
 }
@@ -1699,6 +1710,7 @@ line-height: 40px;
     margin-top: 4px;
     transition: transform 0.3s ease;
   }
+
   .main_h nav ul a {
     text-align: center;
     text-transform: none;
@@ -1786,6 +1798,7 @@ line-height: 40px;
     text-align: center;
     padding: 0 0 20px 0;
   }
+
   #scrolldown {
     bottom: -35px;
     height: 100px;
